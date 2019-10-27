@@ -3,7 +3,7 @@ module.exports = {
     title: 'Stortybook with typescript',
   },
   plugins: [
-    `gatsby-plugin-typescript`,
+    'gatsby-plugin-typescript',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {

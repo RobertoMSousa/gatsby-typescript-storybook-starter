@@ -20,13 +20,14 @@
     "url": "https://github.com/RobertoMSousa/gatsby-typescript-storybook-starter"
   },
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run develop",
+    "start": "concurrently --kill-others \"npm run develop\" \"npm run storybook\"",
     "serve": "gatsby serve",
     "storybook": "start-storybook -p 6006 -c .storybook",
-    "storybook:build": "build-storybook -c .storybook -o public/docs",
     "clean": "gatsby clean",
+    "build": "npm run build:gatsby && npm run build:storybook",
+    "build:gatsby": "gatsby build",
+    "build:storybook": "build-storybook -c .storybook -o public/docs",
     "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
     "format": "prettier --write src/**/*.{js,jsx}",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
