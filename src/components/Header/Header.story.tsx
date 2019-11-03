@@ -12,7 +12,7 @@ const props = {
 
 const story = storiesOf('Components|Header', module)
   .addDecorator(checkA11y)
-  .addDecorator(withInfo)
+  .addDecorator(withInfo as any)
   .addParameters(defaultParameters);
 
 story.add('Header Component', () => <Header {...props} />, documentationConfig);

@@ -8,7 +8,7 @@ import Container from './index';
 
 const story = storiesOf('Components|Container', module)
   .addDecorator(checkA11y)
-  .addDecorator(withInfo)
+  .addDecorator(withInfo as any)
   .addParameters(defaultParameters);
 
 story.add('Container Component', () => <Container isDebug />, documentationConfig);
